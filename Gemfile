@@ -159,3 +159,7 @@ gem 'xorcist', '~> 1.1'
 gem 'cocoon', '~> 1.2'
 
 gem 'net-http', '~> 0.3.2'
+
+gem 'use_packs'
+gem 'packs-rails'
+gem 'visualize_packwerk'
