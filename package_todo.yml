@@ -7,16 +7,10 @@
 # bin/packwerk update-todo
 ---
 packs/admin:
-  "::Admin::AccountAction":
-    violations:
-    - dependency
-    files:
-    - app/controllers/api/v1/admin/account_actions_controller.rb
   "::Admin::AccountDeletionWorker":
     violations:
     - dependency
     files:
-    - app/controllers/api/v1/admin/accounts_controller.rb
     - app/workers/scheduler/suspended_user_cleanup_scheduler.rb
   "::Admin::ActionLog":
     violations:
@@ -27,29 +21,12 @@ packs/admin:
     - db/post_migrate/20221101190723_backfill_admin_action_logs.rb
     - db/post_migrate/20221206114142_backfill_admin_action_logs_again.rb
     - lib/tasks/tests.rake
-    - spec/controllers/api/v1/admin/account_actions_controller_spec.rb
-    - spec/controllers/api/v1/admin/accounts_controller_spec.rb
     - spec/controllers/concerns/accountable_concern_spec.rb
   "::Admin::Import":
     violations:
     - dependency
     files:
     - app/controllers/concerns/admin_export_controller_concern.rb
-  "::Admin::Metrics::Dimension":
-    violations:
-    - dependency
-    files:
-    - app/controllers/api/v1/admin/dimensions_controller.rb
-  "::Admin::Metrics::Measure":
-    violations:
-    - dependency
-    files:
-    - app/controllers/api/v1/admin/measures_controller.rb
-  "::Admin::Metrics::Retention":
-    violations:
-    - dependency
-    files:
-    - app/controllers/api/v1/admin/retention_controller.rb
   "::Admin::SuspensionWorker":
     violations:
     - dependency
@@ -61,7 +38,6 @@ packs/admin:
     violations:
     - dependency
     files:
-    - app/controllers/api/v1/admin/accounts_controller.rb
     - app/services/activitypub/process_account_service.rb
     - app/services/approve_appeal_service.rb
     - spec/services/activitypub/process_account_service_spec.rb

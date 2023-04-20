@@ -18,6 +18,8 @@
     - packs/admin/app/controllers/admin/change_emails_controller.rb
     - packs/admin/app/controllers/admin/relationships_controller.rb
     - packs/admin/app/controllers/admin/statuses_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/account_actions_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
     - packs/admin/app/lib/admin/metrics/dimension/space_usage_dimension.rb
     - packs/admin/app/lib/admin/metrics/measure/instance_accounts_measure.rb
     - packs/admin/app/lib/admin/metrics/measure/instance_followers_measure.rb
@@ -38,12 +40,16 @@
     - dependency
     files:
     - packs/admin/app/controllers/admin/accounts_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
+    - packs/admin/app/controllers/api/v2/admin/accounts_controller.rb
     - packs/admin/spec/controllers/admin/accounts_controller_spec.rb
   "::AccountFilter::KEYS":
     violations:
     - dependency
     files:
     - packs/admin/app/controllers/admin/accounts_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
+    - packs/admin/app/controllers/api/v2/admin/accounts_controller.rb
     - packs/admin/app/helpers/admin/filter_helper.rb
   "::AccountModerationNote":
     violations:
@@ -68,6 +74,13 @@
     - dependency
     files:
     - packs/admin/app/controllers/admin/base_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/canonical_email_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/domain_allows_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/domain_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/email_domain_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/ip_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/reports_controller.rb
     - packs/admin/app/models/admin/account_action.rb
     - packs/admin/app/models/admin/status_batch_action.rb
   "::AccountsHelper":
@@ -140,6 +153,36 @@
     files:
     - packs/admin/app/controllers/admin/announcements_controller.rb
     - packs/admin/app/helpers/admin/filter_helper.rb
+  "::Api::BaseController":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/controllers/api/v1/admin/account_actions_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/canonical_email_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/dimensions_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/domain_allows_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/domain_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/email_domain_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/ip_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/measures_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/reports_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/retention_controller.rb
+  "::Api::V1::Trends::LinksController":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/controllers/api/v1/admin/trends/links_controller.rb
+  "::Api::V1::Trends::StatusesController":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/controllers/api/v1/admin/trends/statuses_controller.rb
+  "::Api::V1::Trends::TagsController":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/controllers/api/v1/admin/trends/tags_controller.rb
   "::Appeal":
     violations:
     - dependency
@@ -174,6 +217,17 @@
     - dependency
     files:
     - packs/admin/app/controllers/admin/base_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/account_actions_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/canonical_email_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/dimensions_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/domain_allows_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/domain_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/email_domain_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/ip_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/measures_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/reports_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/retention_controller.rb
     - packs/admin/app/models/admin/account_action.rb
     - packs/admin/app/models/admin/status_batch_action.rb
   "::Backup":
@@ -186,11 +240,13 @@
     - dependency
     files:
     - packs/admin/spec/controllers/admin/domain_blocks_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/domain_blocks_controller_spec.rb
   "::CanonicalEmailBlock":
     violations:
     - dependency
     files:
     - packs/admin/app/controllers/admin/accounts_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/canonical_email_blocks_controller.rb
     - packs/admin/spec/controllers/admin/accounts_controller_spec.rb
   "::CustomEmoji":
     violations:
@@ -215,6 +271,7 @@
     - dependency
     files:
     - packs/admin/app/controllers/admin/accounts_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
     - packs/admin/app/workers/admin/account_deletion_worker.rb
     - packs/admin/spec/workers/admin/account_deletion_worker_spec.rb
   "::DeliveryFailureTracker":
@@ -228,8 +285,10 @@
     files:
     - packs/admin/app/controllers/admin/domain_allows_controller.rb
     - packs/admin/app/controllers/admin/export_domain_allows_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/domain_allows_controller.rb
     - packs/admin/spec/controllers/admin/domain_allows_controller_spec.rb
     - packs/admin/spec/controllers/admin/export_domain_allows_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/domain_allows_controller_spec.rb
   "::DomainBlock":
     violations:
     - dependency
@@ -237,18 +296,22 @@
     - packs/admin/app/controllers/admin/accounts_controller.rb
     - packs/admin/app/controllers/admin/domain_blocks_controller.rb
     - packs/admin/app/controllers/admin/export_domain_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/domain_blocks_controller.rb
     - packs/admin/spec/controllers/admin/domain_blocks_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/domain_blocks_controller_spec.rb
   "::DomainBlockWorker":
     violations:
     - dependency
     files:
     - packs/admin/app/controllers/admin/domain_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/domain_blocks_controller.rb
     - packs/admin/spec/controllers/admin/domain_blocks_controller_spec.rb
   "::EmailDomainBlock":
     violations:
     - dependency
     files:
     - packs/admin/app/controllers/admin/email_domain_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/email_domain_blocks_controller.rb
     - packs/admin/spec/controllers/admin/email_domain_blocks_controller_spec.rb
   "::Follow":
     violations:
@@ -350,6 +413,7 @@
     - dependency
     files:
     - packs/admin/app/controllers/admin/ip_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/ip_blocks_controller.rb
   "::LanguagesHelper":
     violations:
     - dependency
@@ -420,6 +484,7 @@
     - packs/admin/app/controllers/admin/dashboard_controller.rb
     - packs/admin/app/controllers/admin/reports/actions_controller.rb
     - packs/admin/app/controllers/admin/reports_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/reports_controller.rb
     - packs/admin/app/lib/admin/metrics/measure/instance_reports_measure.rb
     - packs/admin/app/lib/admin/metrics/measure/opened_reports_measure.rb
     - packs/admin/app/lib/admin/metrics/measure/resolved_reports_measure.rb
@@ -432,6 +497,7 @@
     - dependency
     files:
     - packs/admin/app/controllers/admin/reports_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/reports_controller.rb
   "::ReportFilter::KEYS":
     violations:
     - dependency
@@ -515,6 +581,13 @@
     - dependency
     files:
     - packs/admin/app/models/admin/status_batch_action.rb
+  "::Trends":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/controllers/api/v1/admin/trends/links_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/trends/statuses_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/trends/tags_controller.rb
   "::Trends::PreviewCardBatch":
     violations:
     - dependency
@@ -584,6 +657,7 @@
     - dependency
     files:
     - packs/admin/app/controllers/admin/domain_allows_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/domain_allows_controller.rb
     - packs/admin/spec/controllers/admin/domain_allows_controller_spec.rb
   "::UnavailableDomain":
     violations:
@@ -595,6 +669,7 @@
     - dependency
     files:
     - packs/admin/app/controllers/admin/domain_blocks_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/domain_blocks_controller.rb
     - packs/admin/spec/controllers/admin/domain_blocks_controller_spec.rb
   "::UnpublishAnnouncementWorker":
     violations:
@@ -620,6 +695,7 @@
     - packs/admin/app/controllers/admin/users/two_factor_authentications_controller.rb
     - packs/admin/app/lib/admin/metrics/measure/new_users_measure.rb
     - packs/admin/spec/controllers/admin/resets_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/accounts_controller_spec.rb
   "::UserMailer":
     violations:
     - dependency
@@ -636,6 +712,8 @@
     - dependency
     files:
     - packs/admin/app/controllers/admin/roles_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
+    - packs/admin/app/controllers/api/v2/admin/accounts_controller.rb
     - packs/admin/spec/controllers/admin/account_actions_controller_spec.rb
     - packs/admin/spec/controllers/admin/account_moderation_notes_controller_spec.rb
     - packs/admin/spec/controllers/admin/accounts_controller_spec.rb
@@ -682,6 +760,21 @@
     - packs/admin/spec/controllers/admin/warning_presets_controller_spec.rb
     - packs/admin/spec/controllers/admin/webhooks/secrets_controller_spec.rb
     - packs/admin/spec/controllers/admin/webhooks_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/account_actions_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/accounts_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/canonical_email_blocks_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/dimensions_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/domain_allows_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/domain_blocks_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/email_domain_blocks_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/ip_blocks_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/measures_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/reports_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/retention_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/trends/links_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/trends/statuses_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/trends/tags_controller_spec.rb
+    - packs/admin/spec/controllers/api/v2/admin/accounts_controller_spec.rb
     - packs/admin/spec/models/admin/account_action_spec.rb
     - packs/admin/spec/policies/admin/status_policy_spec.rb
   "::UserRole::FLAGS":
