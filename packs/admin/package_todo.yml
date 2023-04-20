@@ -6,7 +6,7 @@
 #
 # bin/packwerk update-todo
 ---
-".":
+packs/user_facing_app:
   "::Account":
     violations:
     - dependency
