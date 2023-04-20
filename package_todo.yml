@@ -6,7 +6,7 @@
 #
 # bin/packwerk update-todo
 ---
-packs/admin:
+packs/messy_middle:
   "::Admin::AccountDeletionWorker":
     violations:
     - dependency

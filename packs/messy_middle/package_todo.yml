@@ -1,0 +1,38 @@
+# This file contains a list of dependencies that are not part of the long term plan for the
+# 'packs/messy_middle' package.
+# We should generally work to reduce this list over time.
+#
+# You can regenerate this file using the following command:
+#
+# bin/packwerk update-todo
+---
+".":
+  "::Account":
+    violations:
+    - dependency
+    files:
+    - packs/messy_middle/app/models/admin/action_log.rb
+    - packs/messy_middle/app/workers/admin/account_deletion_worker.rb
+    - packs/messy_middle/app/workers/admin/suspension_worker.rb
+    - packs/messy_middle/app/workers/admin/unsuspension_worker.rb
+  "::ApplicationRecord":
+    violations:
+    - dependency
+    files:
+    - packs/messy_middle/app/models/admin/action_log.rb
+  "::DeleteAccountService":
+    violations:
+    - dependency
+    files:
+    - packs/messy_middle/app/workers/admin/account_deletion_worker.rb
+    - packs/messy_middle/spec/workers/admin/account_deletion_worker_spec.rb
+  "::SuspendAccountService":
+    violations:
+    - dependency
+    files:
+    - packs/messy_middle/app/workers/admin/suspension_worker.rb
+  "::UnsuspendAccountService":
+    violations:
+    - dependency
+    files:
+    - packs/messy_middle/app/workers/admin/unsuspension_worker.rb

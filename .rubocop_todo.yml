@@ -1019,7 +1019,7 @@ RSpec/Rails/InferredSpecType:
     - 'spec/models/account_spec.rb'
     - 'spec/models/account_statuses_cleanup_policy_spec.rb'
     - 'packs/admin/spec/models/admin/account_action_spec.rb'
-    - 'packs/admin/spec/models/admin/action_log_spec.rb'
+    - 'packs/messy_middle/spec/models/admin/action_log_spec.rb'
     - 'spec/models/announcement_mute_spec.rb'
     - 'spec/models/announcement_reaction_spec.rb'
     - 'spec/models/announcement_spec.rb'
@@ -1611,7 +1611,7 @@ Rails/UnusedIgnoredColumns:
   Exclude:
     - 'app/models/account.rb'
     - 'app/models/account_stat.rb'
-    - 'packs/admin/app/models/admin/action_log.rb'
+    - 'packs/messy_middle/app/models/admin/action_log.rb'
     - 'app/models/custom_filter.rb'
     - 'app/models/email_domain_block.rb'
     - 'app/models/report.rb'

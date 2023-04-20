@@ -28,12 +28,8 @@
     - packs/admin/app/lib/admin/metrics/measure/instance_reports_measure.rb
     - packs/admin/app/lib/admin/metrics/measure/instance_statuses_measure.rb
     - packs/admin/app/lib/admin/system_check/media_privacy_check.rb
-    - packs/admin/app/models/admin/action_log.rb
     - packs/admin/app/models/admin/action_log_filter.rb
     - packs/admin/app/models/admin/status_batch_action.rb
-    - packs/admin/app/workers/admin/account_deletion_worker.rb
-    - packs/admin/app/workers/admin/suspension_worker.rb
-    - packs/admin/app/workers/admin/unsuspension_worker.rb
     - packs/admin/spec/controllers/admin/accounts_controller_spec.rb
   "::AccountFilter":
     violations:
@@ -205,7 +201,6 @@
     - dependency
     files:
     - packs/admin/app/models/admin/account_action.rb
-    - packs/admin/app/models/admin/action_log.rb
     - packs/admin/app/models/admin/status_batch_action.rb
   "::ApproveAppealService":
     violations:
@@ -272,8 +267,6 @@
     files:
     - packs/admin/app/controllers/admin/accounts_controller.rb
     - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
-    - packs/admin/app/workers/admin/account_deletion_worker.rb
-    - packs/admin/spec/workers/admin/account_deletion_worker_spec.rb
   "::DeliveryFailureTracker":
     violations:
     - dependency
@@ -556,11 +549,6 @@
     - dependency
     files:
     - packs/admin/app/controllers/admin/trends/statuses_controller.rb
-  "::SuspendAccountService":
-    violations:
-    - dependency
-    files:
-    - packs/admin/app/workers/admin/suspension_worker.rb
   "::Tag":
     violations:
     - dependency
@@ -676,11 +664,6 @@
     - dependency
     files:
     - packs/admin/app/controllers/admin/announcements_controller.rb
-  "::UnsuspendAccountService":
-    violations:
-    - dependency
-    files:
-    - packs/admin/app/workers/admin/unsuspension_worker.rb
   "::UpdateStatusService":
     violations:
     - dependency
@@ -794,3 +777,39 @@
     files:
     - packs/admin/app/controllers/admin/webhooks/secrets_controller.rb
     - packs/admin/app/controllers/admin/webhooks_controller.rb
+packs/messy_middle:
+  "::Admin::AccountDeletionWorker":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/controllers/admin/accounts_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
+  "::Admin::ActionLog":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/controllers/admin/action_logs_controller.rb
+    - packs/admin/app/models/admin/action_log_filter.rb
+    - packs/admin/spec/controllers/admin/accounts_controller_spec.rb
+    - packs/admin/spec/controllers/admin/action_logs_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/account_actions_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/accounts_controller_spec.rb
+    - packs/admin/spec/models/admin/account_action_spec.rb
+  "::Admin::Import":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/controllers/admin/export_domain_allows_controller.rb
+    - packs/admin/app/controllers/admin/export_domain_blocks_controller.rb
+  "::Admin::SuspensionWorker":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/models/admin/account_action.rb
+    - packs/admin/spec/models/admin/account_action_spec.rb
+  "::Admin::UnsuspensionWorker":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/controllers/admin/accounts_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
