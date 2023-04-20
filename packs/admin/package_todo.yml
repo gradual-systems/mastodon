@@ -127,6 +127,41 @@
     - packs/admin/app/controllers/admin/warning_presets_controller.rb
     - packs/admin/app/controllers/admin/webhooks/secrets_controller.rb
     - packs/admin/app/controllers/admin/webhooks_controller.rb
+  "::Admin::AccountDeletionWorker":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/controllers/admin/accounts_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
+  "::Admin::ActionLog":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/controllers/admin/action_logs_controller.rb
+    - packs/admin/app/models/admin/action_log_filter.rb
+    - packs/admin/spec/controllers/admin/accounts_controller_spec.rb
+    - packs/admin/spec/controllers/admin/action_logs_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/account_actions_controller_spec.rb
+    - packs/admin/spec/controllers/api/v1/admin/accounts_controller_spec.rb
+    - packs/admin/spec/models/admin/account_action_spec.rb
+  "::Admin::Import":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/controllers/admin/export_domain_allows_controller.rb
+    - packs/admin/app/controllers/admin/export_domain_blocks_controller.rb
+  "::Admin::SuspensionWorker":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/models/admin/account_action.rb
+    - packs/admin/spec/models/admin/account_action_spec.rb
+  "::Admin::UnsuspensionWorker":
+    violations:
+    - dependency
+    files:
+    - packs/admin/app/controllers/admin/accounts_controller.rb
+    - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
   "::AdminExportControllerConcern":
     violations:
     - dependency
@@ -777,39 +812,3 @@
     files:
     - packs/admin/app/controllers/admin/webhooks/secrets_controller.rb
     - packs/admin/app/controllers/admin/webhooks_controller.rb
-packs/messy_middle:
-  "::Admin::AccountDeletionWorker":
-    violations:
-    - dependency
-    files:
-    - packs/admin/app/controllers/admin/accounts_controller.rb
-    - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
-  "::Admin::ActionLog":
-    violations:
-    - dependency
-    files:
-    - packs/admin/app/controllers/admin/action_logs_controller.rb
-    - packs/admin/app/models/admin/action_log_filter.rb
-    - packs/admin/spec/controllers/admin/accounts_controller_spec.rb
-    - packs/admin/spec/controllers/admin/action_logs_controller_spec.rb
-    - packs/admin/spec/controllers/api/v1/admin/account_actions_controller_spec.rb
-    - packs/admin/spec/controllers/api/v1/admin/accounts_controller_spec.rb
-    - packs/admin/spec/models/admin/account_action_spec.rb
-  "::Admin::Import":
-    violations:
-    - dependency
-    files:
-    - packs/admin/app/controllers/admin/export_domain_allows_controller.rb
-    - packs/admin/app/controllers/admin/export_domain_blocks_controller.rb
-  "::Admin::SuspensionWorker":
-    violations:
-    - dependency
-    files:
-    - packs/admin/app/models/admin/account_action.rb
-    - packs/admin/spec/models/admin/account_action_spec.rb
-  "::Admin::UnsuspensionWorker":
-    violations:
-    - dependency
-    files:
-    - packs/admin/app/controllers/admin/accounts_controller.rb
-    - packs/admin/app/controllers/api/v1/admin/accounts_controller.rb
