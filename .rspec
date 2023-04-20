@@ -1,3 +1,6 @@
 --color
 --require spec_helper
 --format Fuubar
+
+--require packs/rails/rspec
+

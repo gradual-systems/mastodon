@@ -91,7 +91,7 @@ Layout/TrailingWhitespace:
 # Configuration parameters: AllowedMethods, AllowedPatterns.
 Lint/AmbiguousBlockAssociation:
   Exclude:
-    - 'spec/controllers/admin/account_moderation_notes_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/account_moderation_notes_controller_spec.rb'
     - 'spec/controllers/settings/two_factor_authentication/confirmations_controller_spec.rb'
     - 'spec/controllers/settings/two_factor_authentication/otp_authentication_controller_spec.rb'
     - 'spec/controllers/settings/two_factor_authentication/webauthn_credentials_controller_spec.rb'
@@ -136,7 +136,7 @@ Lint/EmptyBlock:
     - 'spec/fabricators/access_token_fabricator.rb'
     - 'spec/fabricators/conversation_fabricator.rb'
     - 'spec/fabricators/system_key_fabricator.rb'
-    - 'spec/helpers/admin/action_logs_helper_spec.rb'
+    - 'packs/admin/spec/helpers/admin/action_logs_helper_spec.rb'
     - 'spec/lib/activitypub/adapter_spec.rb'
     - 'spec/models/account_alias_spec.rb'
     - 'spec/models/account_deletion_request_spec.rb'
@@ -312,8 +312,8 @@ Naming/VariableNumber:
 # Configuration parameters: MinSize.
 Performance/CollectionLiteralInLoop:
   Exclude:
-    - 'app/models/admin/appeal_filter.rb'
-    - 'app/models/admin/status_filter.rb'
+    - 'packs/admin/app/models/admin/appeal_filter.rb'
+    - 'packs/admin/app/models/admin/status_filter.rb'
     - 'app/models/relationship_filter.rb'
     - 'app/models/trends/preview_card_filter.rb'
     - 'app/models/trends/status_filter.rb'
@@ -348,8 +348,8 @@ Performance/DeletePrefix:
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Performance/MapCompact:
   Exclude:
-    - 'app/lib/admin/metrics/dimension.rb'
-    - 'app/lib/admin/metrics/measure.rb'
+    - 'packs/admin/app/lib/admin/metrics/dimension.rb'
+    - 'packs/admin/app/lib/admin/metrics/measure.rb'
     - 'app/lib/feed_manager.rb'
     - 'app/models/account.rb'
     - 'app/models/account_statuses_cleanup_policy.rb'
@@ -414,9 +414,9 @@ Performance/UnfreezeString:
 RSpec/AnyInstance:
   Exclude:
     - 'spec/controllers/activitypub/inboxes_controller_spec.rb'
-    - 'spec/controllers/admin/accounts_controller_spec.rb'
-    - 'spec/controllers/admin/resets_controller_spec.rb'
-    - 'spec/controllers/admin/settings/branding_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/accounts_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/resets_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/settings/branding_controller_spec.rb'
     - 'spec/controllers/api/v1/media_controller_spec.rb'
     - 'spec/controllers/auth/sessions_controller_spec.rb'
     - 'spec/controllers/settings/two_factor_authentication/confirmations_controller_spec.rb'
@@ -443,9 +443,9 @@ RSpec/ContextWording:
     - 'spec/controllers/accounts_controller_spec.rb'
     - 'spec/controllers/activitypub/collections_controller_spec.rb'
     - 'spec/controllers/activitypub/inboxes_controller_spec.rb'
-    - 'spec/controllers/admin/domain_blocks_controller_spec.rb'
-    - 'spec/controllers/admin/reports/actions_controller_spec.rb'
-    - 'spec/controllers/admin/statuses_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/domain_blocks_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/reports/actions_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/statuses_controller_spec.rb'
     - 'spec/controllers/api/v1/accounts/relationships_controller_spec.rb'
     - 'spec/controllers/api/v1/accounts_controller_spec.rb'
     - 'spec/controllers/api/v1/admin/domain_blocks_controller_spec.rb'
@@ -465,7 +465,7 @@ RSpec/ContextWording:
     - 'spec/controllers/settings/applications_controller_spec.rb'
     - 'spec/controllers/settings/two_factor_authentication/webauthn_credentials_controller_spec.rb'
     - 'spec/controllers/statuses_controller_spec.rb'
-    - 'spec/helpers/admin/account_moderation_notes_helper_spec.rb'
+    - 'packs/admin/spec/helpers/admin/account_moderation_notes_helper_spec.rb'
     - 'spec/helpers/jsonld_helper_spec.rb'
     - 'spec/helpers/routing_helper_spec.rb'
     - 'spec/lib/activitypub/activity/accept_spec.rb'
@@ -485,7 +485,7 @@ RSpec/ContextWording:
     - 'spec/lib/text_formatter_spec.rb'
     - 'spec/models/account/field_spec.rb'
     - 'spec/models/account_spec.rb'
-    - 'spec/models/admin/account_action_spec.rb'
+    - 'packs/admin/spec/models/admin/account_action_spec.rb'
     - 'spec/models/concerns/account_interactions_spec.rb'
     - 'spec/models/concerns/remotable_spec.rb'
     - 'spec/models/custom_emoji_filter_spec.rb'
@@ -620,7 +620,7 @@ RSpec/DescribedClass:
 # This cop supports unsafe autocorrection (--autocorrect-all).
 RSpec/EmptyExampleGroup:
   Exclude:
-    - 'spec/helpers/admin/action_logs_helper_spec.rb'
+    - 'packs/admin/spec/helpers/admin/action_logs_helper_spec.rb'
     - 'spec/models/account_alias_spec.rb'
     - 'spec/models/account_deletion_request_spec.rb'
     - 'spec/models/account_moderation_note_spec.rb'
@@ -661,14 +661,14 @@ RSpec/ExampleLength:
 # SupportedStyles: method_call, block
 RSpec/ExpectChange:
   Exclude:
-    - 'spec/controllers/admin/account_moderation_notes_controller_spec.rb'
-    - 'spec/controllers/admin/custom_emojis_controller_spec.rb'
-    - 'spec/controllers/admin/invites_controller_spec.rb'
-    - 'spec/controllers/admin/report_notes_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/account_moderation_notes_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/custom_emojis_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/invites_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/report_notes_controller_spec.rb'
     - 'spec/controllers/concerns/accountable_concern_spec.rb'
     - 'spec/controllers/invites_controller_spec.rb'
     - 'spec/controllers/settings/two_factor_authentication/webauthn_credentials_controller_spec.rb'
-    - 'spec/models/admin/account_action_spec.rb'
+    - 'packs/admin/spec/models/admin/account_action_spec.rb'
     - 'spec/services/suspend_account_service_spec.rb'
     - 'spec/services/unsuspend_account_service_spec.rb'
     - 'spec/workers/scheduler/accounts_statuses_cleanup_scheduler_spec.rb'
@@ -729,11 +729,11 @@ RSpec/LeakyConstantDeclaration:
 
 RSpec/LetSetup:
   Exclude:
-    - 'spec/controllers/admin/accounts_controller_spec.rb'
-    - 'spec/controllers/admin/action_logs_controller_spec.rb'
-    - 'spec/controllers/admin/instances_controller_spec.rb'
-    - 'spec/controllers/admin/reports/actions_controller_spec.rb'
-    - 'spec/controllers/admin/statuses_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/accounts_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/action_logs_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/instances_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/reports/actions_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/statuses_controller_spec.rb'
     - 'spec/controllers/api/v1/accounts/statuses_controller_spec.rb'
     - 'spec/controllers/api/v1/admin/accounts_controller_spec.rb'
     - 'spec/controllers/api/v1/admin/domain_allows_controller_spec.rb'
@@ -783,7 +783,7 @@ RSpec/LetSetup:
 RSpec/MatchArray:
   Exclude:
     - 'spec/controllers/activitypub/followers_synchronizations_controller_spec.rb'
-    - 'spec/controllers/admin/export_domain_blocks_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/export_domain_blocks_controller_spec.rb'
     - 'spec/controllers/api/v1/accounts/follower_accounts_controller_spec.rb'
     - 'spec/controllers/api/v1/accounts/following_accounts_controller_spec.rb'
     - 'spec/controllers/api/v1/accounts/statuses_controller_spec.rb'
@@ -813,14 +813,14 @@ RSpec/MessageChain:
 # SupportedStyles: have_received, receive
 RSpec/MessageSpies:
   Exclude:
-    - 'spec/controllers/admin/accounts_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/accounts_controller_spec.rb'
     - 'spec/controllers/api/base_controller_spec.rb'
     - 'spec/controllers/auth/registrations_controller_spec.rb'
-    - 'spec/helpers/admin/account_moderation_notes_helper_spec.rb'
+    - 'packs/admin/spec/helpers/admin/account_moderation_notes_helper_spec.rb'
     - 'spec/helpers/application_helper_spec.rb'
     - 'spec/lib/status_finder_spec.rb'
     - 'spec/lib/webfinger_resource_spec.rb'
-    - 'spec/models/admin/account_action_spec.rb'
+    - 'packs/admin/spec/models/admin/account_action_spec.rb'
     - 'spec/models/concerns/remotable_spec.rb'
     - 'spec/models/follow_request_spec.rb'
     - 'spec/models/identity_spec.rb'
@@ -835,8 +835,8 @@ RSpec/MissingExampleGroupArgument:
   Exclude:
     - 'spec/controllers/accounts_controller_spec.rb'
     - 'spec/controllers/activitypub/collections_controller_spec.rb'
-    - 'spec/controllers/admin/statuses_controller_spec.rb'
-    - 'spec/controllers/admin/users/roles_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/statuses_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/users/roles_controller_spec.rb'
     - 'spec/controllers/api/v1/accounts_controller_spec.rb'
     - 'spec/controllers/api/v1/admin/account_actions_controller_spec.rb'
     - 'spec/controllers/api/v1/admin/domain_allows_controller_spec.rb'
@@ -911,22 +911,22 @@ RSpec/Rails/InferredSpecType:
     - 'spec/controllers/activitypub/inboxes_controller_spec.rb'
     - 'spec/controllers/activitypub/outboxes_controller_spec.rb'
     - 'spec/controllers/activitypub/replies_controller_spec.rb'
-    - 'spec/controllers/admin/account_moderation_notes_controller_spec.rb'
-    - 'spec/controllers/admin/accounts_controller_spec.rb'
-    - 'spec/controllers/admin/action_logs_controller_spec.rb'
-    - 'spec/controllers/admin/base_controller_spec.rb'
-    - 'spec/controllers/admin/change_emails_controller_spec.rb'
-    - 'spec/controllers/admin/confirmations_controller_spec.rb'
-    - 'spec/controllers/admin/dashboard_controller_spec.rb'
-    - 'spec/controllers/admin/disputes/appeals_controller_spec.rb'
-    - 'spec/controllers/admin/domain_allows_controller_spec.rb'
-    - 'spec/controllers/admin/domain_blocks_controller_spec.rb'
-    - 'spec/controllers/admin/email_domain_blocks_controller_spec.rb'
-    - 'spec/controllers/admin/export_domain_allows_controller_spec.rb'
-    - 'spec/controllers/admin/export_domain_blocks_controller_spec.rb'
-    - 'spec/controllers/admin/instances_controller_spec.rb'
-    - 'spec/controllers/admin/settings/branding_controller_spec.rb'
-    - 'spec/controllers/admin/tags_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/account_moderation_notes_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/accounts_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/action_logs_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/base_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/change_emails_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/confirmations_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/dashboard_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/disputes/appeals_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/domain_allows_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/domain_blocks_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/email_domain_blocks_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/export_domain_allows_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/export_domain_blocks_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/instances_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/settings/branding_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/tags_controller_spec.rb'
     - 'spec/controllers/api/oembed_controller_spec.rb'
     - 'spec/controllers/api/v1/accounts/pins_controller_spec.rb'
     - 'spec/controllers/api/v1/accounts/search_controller_spec.rb'
@@ -1000,8 +1000,8 @@ RSpec/Rails/InferredSpecType:
     - 'spec/controllers/well_known/nodeinfo_controller_spec.rb'
     - 'spec/controllers/well_known/webfinger_controller_spec.rb'
     - 'spec/helpers/accounts_helper_spec.rb'
-    - 'spec/helpers/admin/account_moderation_notes_helper_spec.rb'
-    - 'spec/helpers/admin/action_logs_helper_spec.rb'
+    - 'packs/admin/spec/helpers/admin/account_moderation_notes_helper_spec.rb'
+    - 'packs/admin/spec/helpers/admin/action_logs_helper_spec.rb'
     - 'spec/helpers/flashes_helper_spec.rb'
     - 'spec/helpers/formatting_helper_spec.rb'
     - 'spec/helpers/home_helper_spec.rb'
@@ -1018,8 +1018,8 @@ RSpec/Rails/InferredSpecType:
     - 'spec/models/account_moderation_note_spec.rb'
     - 'spec/models/account_spec.rb'
     - 'spec/models/account_statuses_cleanup_policy_spec.rb'
-    - 'spec/models/admin/account_action_spec.rb'
-    - 'spec/models/admin/action_log_spec.rb'
+    - 'packs/admin/spec/models/admin/account_action_spec.rb'
+    - 'packs/admin/spec/models/admin/action_log_spec.rb'
     - 'spec/models/announcement_mute_spec.rb'
     - 'spec/models/announcement_reaction_spec.rb'
     - 'spec/models/announcement_spec.rb'
@@ -1085,14 +1085,14 @@ RSpec/RepeatedExampleGroupBody:
 
 RSpec/RepeatedExampleGroupDescription:
   Exclude:
-    - 'spec/controllers/admin/reports/actions_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/reports/actions_controller_spec.rb'
     - 'spec/policies/report_note_policy_spec.rb'
 
 RSpec/ScatteredSetup:
   Exclude:
     - 'spec/controllers/activitypub/followers_synchronizations_controller_spec.rb'
     - 'spec/controllers/activitypub/outboxes_controller_spec.rb'
-    - 'spec/controllers/admin/disputes/appeals_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/disputes/appeals_controller_spec.rb'
     - 'spec/controllers/auth/registrations_controller_spec.rb'
     - 'spec/services/activitypub/process_account_service_spec.rb'
 
@@ -1114,7 +1114,7 @@ RSpec/StubbedMock:
 
 RSpec/SubjectDeclaration:
   Exclude:
-    - 'spec/controllers/admin/domain_blocks_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/domain_blocks_controller_spec.rb'
     - 'spec/controllers/api/v1/admin/domain_blocks_controller_spec.rb'
     - 'spec/models/account_migration_spec.rb'
     - 'spec/models/account_spec.rb'
@@ -1144,11 +1144,11 @@ RSpec/SubjectStub:
 # Configuration parameters: IgnoreNameless, IgnoreSymbolicNames.
 RSpec/VerifiedDoubles:
   Exclude:
-    - 'spec/controllers/admin/change_emails_controller_spec.rb'
-    - 'spec/controllers/admin/confirmations_controller_spec.rb'
-    - 'spec/controllers/admin/disputes/appeals_controller_spec.rb'
-    - 'spec/controllers/admin/domain_allows_controller_spec.rb'
-    - 'spec/controllers/admin/domain_blocks_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/change_emails_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/confirmations_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/disputes/appeals_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/domain_allows_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/domain_blocks_controller_spec.rb'
     - 'spec/controllers/api/v1/reports_controller_spec.rb'
     - 'spec/controllers/api/web/embeds_controller_spec.rb'
     - 'spec/controllers/auth/sessions_controller_spec.rb'
@@ -1175,7 +1175,7 @@ RSpec/VerifiedDoubles:
     - 'spec/validators/url_validator_spec.rb'
     - 'spec/views/statuses/show.html.haml_spec.rb'
     - 'spec/workers/activitypub/processing_worker_spec.rb'
-    - 'spec/workers/admin/domain_purge_worker_spec.rb'
+    - 'packs/admin/spec/workers/admin/domain_purge_worker_spec.rb'
     - 'spec/workers/domain_block_worker_spec.rb'
     - 'spec/workers/domain_clear_media_worker_spec.rb'
     - 'spec/workers/feed_insert_worker_spec.rb'
@@ -1187,11 +1187,11 @@ RSpec/VerifiedDoubles:
 # Include: app/controllers/**/*.rb
 Rails/ActionOrder:
   Exclude:
-    - 'app/controllers/admin/announcements_controller.rb'
-    - 'app/controllers/admin/roles_controller.rb'
-    - 'app/controllers/admin/rules_controller.rb'
-    - 'app/controllers/admin/warning_presets_controller.rb'
-    - 'app/controllers/admin/webhooks_controller.rb'
+    - 'packs/admin/app/controllers/admin/announcements_controller.rb'
+    - 'packs/admin/app/controllers/admin/roles_controller.rb'
+    - 'packs/admin/app/controllers/admin/rules_controller.rb'
+    - 'packs/admin/app/controllers/admin/warning_presets_controller.rb'
+    - 'packs/admin/app/controllers/admin/webhooks_controller.rb'
     - 'app/controllers/api/v1/admin/domain_allows_controller.rb'
     - 'app/controllers/api/v1/admin/domain_blocks_controller.rb'
     - 'app/controllers/api/v1/admin/email_domain_blocks_controller.rb'
@@ -1374,7 +1374,7 @@ Rails/FilePath:
     - 'lib/tasks/branding.rake'
     - 'lib/tasks/emojis.rake'
     - 'lib/tasks/repo.rake'
-    - 'spec/controllers/admin/custom_emojis_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/custom_emojis_controller_spec.rb'
     - 'spec/fabricators/custom_emoji_fabricator.rb'
     - 'spec/fabricators/site_upload_fabricator.rb'
     - 'spec/rails_helper.rb'
@@ -1531,7 +1531,7 @@ Rails/ReversibleMigration:
 # ForbiddenMethods: decrement!, decrement_counter, increment!, increment_counter, insert, insert!, insert_all, insert_all!, toggle!, touch, touch_all, update_all, update_attribute, update_column, update_columns, update_counters, upsert, upsert_all
 Rails/SkipsModelValidations:
   Exclude:
-    - 'app/controllers/admin/invites_controller.rb'
+    - 'packs/admin/app/controllers/admin/invites_controller.rb'
     - 'app/controllers/concerns/session_tracking_concern.rb'
     - 'app/models/concerns/account_merging.rb'
     - 'app/models/concerns/expireable.rb'
@@ -1611,7 +1611,7 @@ Rails/UnusedIgnoredColumns:
   Exclude:
     - 'app/models/account.rb'
     - 'app/models/account_stat.rb'
-    - 'app/models/admin/action_log.rb'
+    - 'packs/admin/app/models/admin/action_log.rb'
     - 'app/models/custom_filter.rb'
     - 'app/models/email_domain_block.rb'
     - 'app/models/report.rb'
@@ -1624,7 +1624,7 @@ Rails/UnusedIgnoredColumns:
 Rails/WhereExists:
   Exclude:
     - 'app/controllers/activitypub/inboxes_controller.rb'
-    - 'app/controllers/admin/email_domain_blocks_controller.rb'
+    - 'packs/admin/app/controllers/admin/email_domain_blocks_controller.rb'
     - 'app/controllers/auth/registrations_controller.rb'
     - 'app/lib/activitypub/activity/create.rb'
     - 'app/lib/delivery_failure_tracker.rb'
@@ -2140,7 +2140,7 @@ Style/GlobalVars:
 # Configuration parameters: MinBodyLength, AllowConsecutiveConditionals.
 Style/GuardClause:
   Exclude:
-    - 'app/controllers/admin/confirmations_controller.rb'
+    - 'packs/admin/app/controllers/admin/confirmations_controller.rb'
     - 'app/controllers/auth/confirmations_controller.rb'
     - 'app/controllers/auth/passwords_controller.rb'
     - 'app/controllers/settings/two_factor_authentication/webauthn_credentials_controller.rb'
@@ -2178,7 +2178,7 @@ Style/GuardClause:
 # SupportedStyles: braces, no_braces
 Style/HashAsLastArrayItem:
   Exclude:
-    - 'app/controllers/admin/statuses_controller.rb'
+    - 'packs/admin/app/controllers/admin/statuses_controller.rb'
     - 'app/controllers/api/v1/statuses_controller.rb'
     - 'app/models/account.rb'
     - 'app/models/concerns/account_counters.rb'
@@ -2197,8 +2197,8 @@ Style/HashSyntax:
     - 'app/helpers/application_helper.rb'
     - 'app/models/media_attachment.rb'
     - 'lib/terrapin/multi_pipe_extensions.rb'
-    - 'spec/controllers/admin/reports/actions_controller_spec.rb'
-    - 'spec/controllers/admin/statuses_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/reports/actions_controller_spec.rb'
+    - 'packs/admin/spec/controllers/admin/statuses_controller_spec.rb'
     - 'spec/controllers/concerns/signature_verification_spec.rb'
 
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -2281,9 +2281,9 @@ Style/NumericLiterals:
 # AllowedMethods: respond_to_missing?
 Style/OptionalBooleanParameter:
   Exclude:
-    - 'app/helpers/admin/account_moderation_notes_helper.rb'
+    - 'packs/admin/app/helpers/admin/account_moderation_notes_helper.rb'
     - 'app/helpers/jsonld_helper.rb'
-    - 'app/lib/admin/system_check/message.rb'
+    - 'packs/admin/app/lib/admin/system_check/message.rb'
     - 'app/lib/request.rb'
     - 'app/lib/webfinger.rb'
     - 'app/services/block_domain_service.rb'

@@ -10,3 +10,16 @@ group :development, :test do
   gem 'rubocop-rspec', require: false
   gem 'rubocop', require: false
 end
+
+gem 'packs-rails'
+
+gem 'use_packs', group: %w(development test)
+gem 'visualize_packwerk', group: %w(development test)
+
+# We're using this fork for the Mastodon Gradual Modularization workshop only. 
+# In a real-life situation you should replace the following line with commented out line below
+gem 'packwerk', 
+  github: 'gradual-systems/packwerk', 
+  branch: 'main', group: %w(development test)
+# gem 'packwerk', group: %w(development test)
+
