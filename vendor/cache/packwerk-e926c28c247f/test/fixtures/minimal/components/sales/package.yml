@@ -1,0 +1,7 @@
+---
+enforce_dependencies: true
+metadata:
+  stewards:
+  - "@Shopify/sales"
+  slack_channels:
+  - "#sales"

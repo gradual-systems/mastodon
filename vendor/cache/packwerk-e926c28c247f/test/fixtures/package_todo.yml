@@ -1,0 +1,7 @@
+---
+buyers:
+  "::Buyers::Document":
+    violations:
+    - some_checker_type
+    files:
+    - orders/app/jobs/orders/sweepers/purge_old_document_rows_task.rb
